@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to Git</title>
+    <style>
+
+        body {
+            text-align: center;
+        }
+
+        table {
+            margin: 0 30%;
+            border: black 2px solid;
+            align-self: center;
+        }
+
+        thead th {
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <table>
+        <thead>
+            Intro to Git & GitHub
+            <th>Command</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><pre>git init</pre></td>
+                <td>Initializes our repo on our machine</td>
+            </tr>
+            <tr>
+                <td><pre>git status</pre></td>
+                <td>Displays tracked files status</td>
+            </tr>
+            <tr>
+                <td><pre>git add</pre></td>
+                <td>stages any changed files</td>
+            </tr>
+            <tr>
+                <td><pre>git commit -m "your message"</pre></td>
+                <td>clears the staging and provides the "why"</td>
+            </tr>
+            <tr>
+                <td><pre>git push</pre></td>
+                <td>uploads your local commits</td>
+            </tr>
+            <tr>
+                <td><pre>git pull</pre></td>
+                <td>downloads changes from GitHub</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <h2>When Updating a Repo</h2>
+        <!-- CTRL + D or CMD + D to highlight multiple characters -->
+        <li style="list-style-type: none;">git add .</li>
+        <li style="list-style-type: none;">git commit -m "message"</li>
+        <li style="list-style-type: none;">git push origin main</li>
+    </ul>
+
+</body>
+</html>
