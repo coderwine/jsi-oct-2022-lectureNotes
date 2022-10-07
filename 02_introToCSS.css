@@ -1,0 +1,65 @@
+nav {
+    background-color: #d2d2d2;
+    /* background-color: red; */
+    /* 
+        - preset colors: red, blue, yellow, etc. 
+        - rgb & rgba (red, green, blue, alpha)
+            - alpha determines transparency
+            - ex: rgba(200, 15, 5, .5)
+        - Hexidecimal
+            - 16 digits: 0-9 A-F
+            - ex:   #fffff; (white)
+                    #00000; (black)
+    */
+    overflow: hidden;
+}
+
+#home {
+    float: left;
+    color: red !important;
+}
+
+.btn {
+    float: right;
+    color: black;
+    text-align: center;
+    /* padding: 14px 16px 14px 16px; */
+    padding: 14px 16px;
+    /* padding: 14px; */
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* .new-class {
+    color: red;
+} */
+
+/* 
+    Compound Operators:
+        >   Refers to direct children of an element
+        ,   Matching selector
+        +   Immediate sibling of an element
+        ~   Subsequent sibling of an element
+*/
+
+nav .btn {
+    /* Points to the Nav Element and ANY class within (children) it with the name "btn". */
+    text-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+div .paragraph > p {
+    /* targeting any div with a class "paragraph" that is holding a <p> element */
+    color: red;
+}
+
+.paragraph + div {
+    color: purple;
+}
+
+a:hover {
+    color: lightblue;
+    /* 
+    mousing over any anchor tag will alter its color
+        - "home" doesn't change due to !important
+    */
+}
