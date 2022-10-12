@@ -1,0 +1,71 @@
+/* ! GRID STYLING */
+/*  
+    grid-template-rows: 2fr 20% 200px <-- details the rows
+    grid-template-columns: 2em 2fr <--  details columns
+
+    columns:
+        - Required
+        - If not set, only 1 column will be default
+    rows:
+        - optional
+        - necessary if rows are different sizes
+    gap:
+        - determines the gap between rows/columns
+        - property used when gap is uniform
+            - column-gap: specify column only
+            - row-gap: specify row only
+*/
+
+.grid-sample {
+    display: grid;
+    grid-template: repeat(4, 25%) / repeat(8, 12.5%);
+}
+
+.grid-sample h1 {
+    text-align: center;
+    grid-column: span 8;
+}
+
+#grid-sidebar {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 2;
+    grid-row-end: span 2;
+}
+
+#grid-article {
+    grid-area: 2 / 3 / 3 / 9;
+}
+
+.grid-sample footer {
+    text-align: center;
+    grid-column: 1 / span 8;
+    grid-row: 4;
+}
+
+/* ! FLEX STYLING */
+.flex-sample {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* align is now "shifted" to left-right due to the direction being declared column. */
+}
+
+#flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.inside-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.flex-sample footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
