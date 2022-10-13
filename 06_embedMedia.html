@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedding Media</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Purposes: 
+            - Videos can be a useful tool to provide information
+            - Images can make your site more enjoyable
+            - Maps can help potential customers route to "your" store.
+            - Provide more info and engagement
+
+        Types:
+            - Media (images, video, audio)
+            - other HTML or documents
+            - ads
+            - maps, graphs, etc.
+            - search bars
+    -->
+
+    <!-- Image -->
+    <img 
+        src="https://imgs.search.brave.com/CvCz_h9vCKmD2oJ6HfxOPXclrQSLiS_7t-caNAfkAc8/rs:fit:1200:1000:1/g:ce/aHR0cDovL3d3dy5l/bWFnaWRsYS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTMv/MTAvaHRtbDUucG5n" 
+        alt="HTML image"
+        style="height: 200px; width: 300px;"
+        >
+        <!-- common files: 
+            - jpg/jpeg
+                - common
+                - no transparency allowed
+                - raster (pixel)
+            - png 
+                - raster
+                - supports transparency
+            - svg
+                - scalable vector graphic
+                - vector
+                - scales indefinitely
+        -->
+        <br>
+
+        <!-- iFrame -->
+        <iframe 
+            src="https://www.december.com/html/spec/HTML5-Cheat-Sheet.pdf" 
+            frameborder="0"
+            title="HTML Cheatsheet"
+            height="500"
+            width="800"
+            >
+        </iframe>
+        <!-- 
+            inline frame
+                - can take longer to load
+                - used embed other documents
+                - utilize attributes to detail elements
+                - common to use for videos from dedicated hosts (YouTube, Vimeo)
+        -->
+        <br>
+
+        <!-- Video -->
+        <video width="400" height="200" controls>
+            <source src="#mp4" type="video/mp4">
+            <source src="#ogg" type="video/ogg">
+            <source src="#mov" type="video/mov">
+            Unsupported file type in browser! :(
+        </video>
+        <!-- 
+            - option for locally stored video
+            - control
+                - provides a "play", "pause", "volume" option for the player.
+            - source
+                - provides possible file formats for the users browser.
+                - run from top to bottom
+        -->
+        <br>
+
+        <!-- audio -->
+        <audio autoplay="false" muted="true" controls>
+            <source src="#audio-mp3" type="audio/mpeg">
+            <source src="#audio-ogg" type="audio/ogg">
+            <p>Error message here: Unsupported file.</p>
+        </audio>
+
+        <!-- 
+            - autoplay
+                - starts audio when page loads
+                - accepts a boolean value (true/false) to either do this or not.
+            - muted
+                - depending on true/false, can be muted on load.
+            - loop
+                - repeats the audio after it is loaded.
+        -->
+        <br>
+
+        <!-- Maps -->
+        <iframe 
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-73.2130900,44.4749000,-73.2102500,44.4772200&layer=mapnik" 
+            frameborder="0"
+            width="400"
+            height="300"
+            >
+        </iframe>
+
+        <!-- Additional
+            <canvas>    - can be used for animations using JavaScript
+            Flash       - no longer used as Adobe has retired it back in 2015
+        -->
+</body>
+</html>
