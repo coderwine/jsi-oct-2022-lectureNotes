@@ -1,0 +1,103 @@
+/*! Media Query Build */
+/* 
+    Common units of Measurements
+        - Percentages - %
+        - Viewport Width / Height - vw / vh
+        - Root Element font-size - rem
+        - Parent font-size - em
+
+    Using Media Queries
+        ex:
+            @media screen {
+                div {  <-- element to adjust
+                    background-color: blue; <-- attribute
+                }
+            }
+        
+        ex:
+            AND
+                @media screen and (min-width:800px) {
+                    ...
+                }
+            
+            OR
+                @media screen, (min-width: 800px) {
+                    ...
+                }
+
+    Build with Mobile First in mind!
+*/
+
+@media (max-width: 420px) {
+    /* global */
+    p {
+        font-size: 16pt;
+    }
+
+    /* Nav */
+    nav ul li {
+        font-size: x-large;
+        margin: 0 1.5rem;
+    }
+
+    /* About */
+
+    /* Menu */
+    .item-desc {
+        width: 100vw;
+    }
+
+    .desc {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .desc > p {
+        padding: 1rem 3rem;
+    }
+
+    /* Footer */
+    footer {
+        font-size: x-large;
+    }
+
+}
+
+/* 
+CHALLENGE 1:
+    - If the user is viewing the page in a landscape mode on their phone (galaxy), increase the font size of the nav bar and footer.
+    - Include a bit of spacing within the footer so that the text isn't directly on the bottom of the screen.
+
+Your code below
+*/
+
+@media (max-width:915px) {
+    li a {
+        font-size: x-large;
+    }
+    
+    footer {
+        padding-bottom: .5rem;
+    }
+}
+
+/*
+CHALLENGE 2:
+    - Create a media query to accept a screen AND the width of a iPhone SE (375px).
+    - Have the navigational options not display.
+    - Enlarge the Brand so that it is more of a focal point in the header. 
+        - approx. 30-40pt
+
+Your code below
+*/
+
+@media screen and (max-width: 380px) {
+    header nav {
+        display: none;
+    }
+
+    header a h1 {
+        font-size: 36pt;
+    }
+
+}
