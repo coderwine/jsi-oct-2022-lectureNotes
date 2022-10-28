@@ -92,12 +92,23 @@ function myName(firstName, lastName) {
 // myName('Bruce');
 myName('Bruce', 'Wayne');
 
+
+//? Challenge
 /*
     Make a tip calculator using a function
     Have it RETURN the value
     Capture that returned value in a VARIABLE
     Print that variable
 */
+
+function tipCalc(bill) {
+    let tip = bill * 0.2;
+    return tip.toFixed(2); // toFixed is the number of digits to appear after a decimal
+}
+
+let totalTip = tipCalc(19.72);
+console.log(totalTip);
+
 
 /*
 !   Arrow Functions
