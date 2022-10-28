@@ -177,7 +177,7 @@ console.log(`Spider-Man lands in the ${structure}.`);
     - Runs the code block at least once!
 */
 
-let spidyHP = 20;
+let spidyHP = 20; // created variable and assigned it a value of 20
 let badGuys = [
     {
         baddie: 'Green Goblin',
@@ -224,4 +224,6 @@ do {
 
 } while (villain.hp > 0);
 
-villain.hp <= 0 ? console.log(`Spider-Man captures ${villain.baddie}`) : console.log(`${villain.baddie} has taken down Spider-Man!!!`);
+villain.hp <= 0 ? 
+    console.log(`Spider-Man captures ${villain.baddie}`) : 
+    console.log(`${villain.baddie} has taken down Spider-Man!!!`);
