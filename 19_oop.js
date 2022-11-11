@@ -17,6 +17,15 @@ class Pet {
     speak() {
         return `${this.name} says, ${this.voice}`;
     }
+
+    //? Part of Solution to Below Challenge
+    fly() {
+        if(this.flies === true) {
+            return `${this.name} takes to the skies!`
+        } else {
+            return `${this.name} can only gaze upward...`
+        }
+    }
 }
 
 class Dog extends Pet {
@@ -66,6 +75,16 @@ console.log(frog);
 */
 
 //? Solution
+class Bird extends Pet {
+    constructor(name,sex,flies) {
+        super(name,sex);
+        this.flies = flies;
+    }
+}
+
+let crackers = new Bird('Crackers', 'female', true);
+console.log(crackers.fly());
+console.log(mayo.fly());
 
 //! Abstraction
 // - Hiding complexity via an objects methods
