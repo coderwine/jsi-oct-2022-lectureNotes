@@ -26,6 +26,7 @@ function addToList(someList, someItem) {
                 }
             })
         });
+
     } else {
         someList.push(arr);
     }
@@ -37,12 +38,30 @@ function removeFromList(someList, someItem) {
 // search someList for someItem and remove it
 // rearrange the rest of the items within the Array
 // so that there are no gaps within the Array
+
+    someList.forEach((d, i) => {
+        console.log(d);
+        if(someItem === d[0]) {
+            someList.splice(i,1)
+        } else  {
+            console.error('No item found!');
+        }
+    })
 }
 
 function updateQuantity(someList, someItem, newQuantity) {
 // your code here
 // search someList for someItem and
 // change the quantity to the newQuantity value
+
+    someList.forEach((item, i) => {
+
+        item.forEach(d => {
+            if(someItem === d) {
+                someList[i].splice(1,1,newQuantity)
+            }
+        })
+    })
 }
 
 addToList(shoppingList, "eggs");
@@ -54,10 +73,12 @@ addToList(shoppingList, "eggs");
 // include ["eggs" , 2]
 console.log(shoppingList);
 
-// updateQuantity(shoppingList, "eggs", 12);
+updateQuantity(shoppingList, "eggs", 12);
 // updates the shoppingList Array to 
 // include ["eggs" , 12]
+console.log(shoppingList);
 
-// removeFromList(shoppingList, "eggs");
+removeFromList(shoppingList, "eggs");
 // shopping list should now be reset back to
 // [["milk", 1],["cheese", 2],["ice cream", 3]];
+console.log(shoppingList);
