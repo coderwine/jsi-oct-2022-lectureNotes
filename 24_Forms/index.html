@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Animal Table</title>
+</head>
+<body>
+    <h1>Animal Table</h1>
+
+    <!-- FORM -->
+    <div id="container">
+        <form>
+            <!-- 3 aspects: Species / Name / Sex -->
+            <label for="species">Add Animal</label>
+            <input
+                required
+                autocomplete="off"
+                type="text"
+                name="species"
+                placeholder="Place species type here..."
+                >
+            <br>
+            <label for="name">What is its name?</label>
+            <input 
+                required
+                type="text"
+                autocomplete="off"
+                name="name"
+                placeholder="Input the creatures name..."
+                >
+            
+            <div id="radio-btn">
+                <label for="male">Male</label>
+                <input type="radio" name="sex" value="male" required>
+                <label for="female">Female</label>
+                <input type="radio" name="sex" value="female" required>
+            </div>
+
+            <input type="submit" value="Add" id="submit-btn">
+
+        </form>
+    </div>
+
+
+    <!-- TABLE -->
+    <div id="table-window">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Sex</th>
+                    <th>Species</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Will be filled in with JS -->
+                <!-- <tr>
+                    <td>1</td>
+                    <td>Gonzo</td>
+                    <td>Male</td>
+                    <td>Cat</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
