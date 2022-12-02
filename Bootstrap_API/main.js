@@ -1,4 +1,4 @@
-import { key } from "./helpers/key.js";
+import { key } from "./helpers/key.js"; // pulls from our helpers folder
 
 //ANCHOR Global Variables
 const url = `https://api.spoonacular.com/recipes/random`;
