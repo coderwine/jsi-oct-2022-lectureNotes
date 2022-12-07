@@ -1,0 +1,20 @@
+:root {
+    --tripWord: rgb(218, 91, 117);
+    --tripLet: rgb(82, 82, 246);
+    --dblWord: rgb(220, 137, 151);
+    --dblLet: rgb(87, 210, 250);
+}
+
+#board {
+    display: grid;
+    grid-template: repeat(15,6.67%) / repeat(15, 6.67%);
+    width: 100vw;
+    height: 100vh;
+}
+
+#board div {
+    /* grid-area: ; */
+    border: solid 1px black;
+    width: 50px;
+    background-color: tan;
+}
