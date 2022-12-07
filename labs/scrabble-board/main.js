@@ -31,6 +31,8 @@ const displayBoard = () => {
         board.appendChild(div);
     })
 
+
+
 }
 
 function setColor(posNumber) {

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">Team Member</h1>
+    <div id="playerBtn">
+
+    </div>
+
+
+    <!-- OUR SCRIPT -->
+    <script>
+        let team = './team.json';
+        const teamMember = document.getElementById('header');
+        const playerBtn = document.getElementById('playerBtn');
+
+        let totalTeam;
+
+
+        const getTeam = async () => {
+            
+            let res = await fetch(team);
+            let data = await res.json();
+            let players = data;
+
+            totalTeam = players.teamA;
+
+                totalTeam.map((p,i) => {
+                    console.log(p.GPY);
+
+                    let btn = document.createElement('button');
+                    btn.textContent = p.name;
+                    btn.onclick = () => changeHeader(p);
+                    
+                    playerBtn.appendChild(btn);
+
+                })
+            
+        }
+
+        function changeHeader(player) {
+            console.log(player);
+            teamMember.textContent = `${player.name} has a GPY of: ${player.GPY}`
+        }
+
+        getTeam()
+
+
+
+        
+
+    </script>
+</body>
+</html>

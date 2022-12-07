@@ -1,0 +1,35 @@
+{
+    "teamA":
+        [
+            {
+                "name":"Steve",
+                "positions":["center","defender"],
+                "GPY": 13
+            },
+            {
+                "name":"Wilmer",
+                "positions":["center","defender"],
+                "GPY": 25
+            },
+            {
+                "name":"Dan",
+                "positions":["center","defender"],
+                "GPY": 10
+            },
+            {
+                "name":"Eric",
+                "positions":["center","defender"],
+                "GPY": 1
+            },
+            {
+                "name":"Bob",
+                "positions":["center","defender"],
+                "GPY": 12
+            },
+            {
+                "name":"Lenny",
+                "positions":["center","defender"],
+                "GPY": 15
+            }
+        ]
+}
